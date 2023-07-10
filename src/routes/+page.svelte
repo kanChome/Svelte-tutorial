@@ -25,7 +25,22 @@
     imagePath: "https://picsum.photos/200/300",
     text: "text",
   };
+
+  const alertToggle = () => {
+    alert("click Svelte Event");
+  };
+
+  const consoleToggle = () => {
+    console.log("once click Svelte Event");
+  };
 </script>
+
+<button on:click={alertToggle} on:click|once={consoleToggle}
+  >multi toggle</button
+>
+
+<button on:click|once={alertToggle} on:click={consoleToggle}>once toggle</button
+>
 
 <Child {text} {html} {arr} {obj} />
 
