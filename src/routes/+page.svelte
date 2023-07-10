@@ -1,5 +1,6 @@
 <script lang="ts">
   import Child from "$lib/components/Child.svelte";
+  import DispatcherChild from "$lib/components/DispatcherChild.svelte";
   import type { Arr } from "../types/Arr.type";
   import type { Obj } from "../types/Obj.type";
 
@@ -33,6 +34,10 @@
   const consoleToggle = () => {
     console.log("once click Svelte Event");
   };
+
+  const handleCustomEvent = (event: CustomEvent) => {
+    console.log(event.detail.data);
+  };
 </script>
 
 <button on:click={alertToggle} on:click|once={consoleToggle}
@@ -44,6 +49,7 @@
 
 <Child {text} {html} {arr} {obj} />
 
+<DispatcherChild on:myEvent={handleCustomEvent} />
 <p>
   Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 </p>
