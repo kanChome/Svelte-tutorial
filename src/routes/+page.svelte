@@ -1,6 +1,9 @@
 <script lang="ts">
   import Child from "$lib/components/Child.svelte";
   import DispatcherChild from "$lib/components/DispatcherChild.svelte";
+  import Increment from "$lib/components/Increment.svelte";
+  import ReactiveIncrement from "$lib/components/ReactiveIncrement.svelte";
+  import ReactiveStetment from "$lib/components/ReactiveStetment.svelte";
   import type { Arr } from "../types/Arr.type";
   import type { Obj } from "../types/Obj.type";
 
@@ -40,16 +43,23 @@
   };
 </script>
 
+<Child {text} {html} {arr} {obj} />
+
 <button on:click={alertToggle} on:click|once={consoleToggle}
   >multi toggle</button
 >
-
 <button on:click|once={alertToggle} on:click={consoleToggle}>once toggle</button
 >
-
-<Child {text} {html} {arr} {obj} />
+<br />
 
 <DispatcherChild on:myEvent={handleCustomEvent} />
+<br />
+
+<Increment />
+
+<ReactiveIncrement />
+
+<ReactiveStetment />
 <p>
   Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 </p>
