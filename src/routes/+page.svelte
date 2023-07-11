@@ -1,6 +1,9 @@
 <script lang="ts">
+  import Binding from "$lib/components/Binding.svelte";
   import Child from "$lib/components/Child.svelte";
   import DispatcherChild from "$lib/components/DispatcherChild.svelte";
+  import DomElementBinding from "$lib/components/DomElementBinding.svelte";
+  import GroupBinding from "$lib/components/GroupBinding.svelte";
   import Increment from "$lib/components/Increment.svelte";
   import ReactiveIncrement from "$lib/components/ReactiveIncrement.svelte";
   import ReactiveStetment from "$lib/components/ReactiveStetment.svelte";
@@ -60,6 +63,12 @@
 <ReactiveIncrement />
 
 <ReactiveStetment />
+
+<Binding />
+
+<GroupBinding />
+
+<DomElementBinding />
 <p>
   Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 </p>
