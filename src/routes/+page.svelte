@@ -1,14 +1,18 @@
 <script lang="ts">
-  import Binding from "$lib/components/Binding.svelte";
-  import Child from "$lib/components/Child.svelte";
-  import DispatcherChild from "$lib/components/DispatcherChild.svelte";
-  import DomElementBinding from "$lib/components/DomElementBinding.svelte";
-  import GroupBinding from "$lib/components/GroupBinding.svelte";
-  import Increment from "$lib/components/Increment.svelte";
-  import ReactiveIncrement from "$lib/components/ReactiveIncrement.svelte";
-  import ReactiveStetment from "$lib/components/ReactiveStetment.svelte";
+  import Binding from "$lib/components/binding/Binding.svelte";
+  import Child from "$lib/components/props/Child.svelte";
+  import DispatcherChild from "$lib/components/props/DispatcherChild.svelte";
+  import DomElementBinding from "$lib/components/binding/DomElementBinding.svelte";
+  import GroupBinding from "$lib/components/binding/GroupBinding.svelte";
+  import Increment from "$lib/components/reactive/Increment.svelte";
+  import ReactiveIncrement from "$lib/components/reactive/ReactiveIncrement.svelte";
+  import ReactiveStetment from "$lib/components/reactive/ReactiveStetment.svelte";
   import type { Arr } from "../types/Arr.type";
   import type { Obj } from "../types/Obj.type";
+  import OnMount from "$lib/components/lifecycle/onMount.svelte";
+  import BeforeUpdate from "$lib/components/lifecycle/beforeUpdate.svelte";
+  import AfterUpdate from "$lib/components/lifecycle/afterUpdate.svelte";
+  import Tick from "$lib/components/lifecycle/tick.svelte";
 
   let text = "text,txt";
 
@@ -69,6 +73,14 @@
 <GroupBinding />
 
 <DomElementBinding />
+
+<OnMount />
+
+<BeforeUpdate />
+
+<AfterUpdate />
+
+<Tick />
 <p>
   Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 </p>
