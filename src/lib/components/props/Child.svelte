@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { Arr } from "../../types/Arr.type";
-  import type { Obj } from "../../types/Obj.type";
+  import type { Arr } from "../../../types/Arr.type";
+  import type { Obj } from "../../../types/Obj.type";
 
   export let text: string;
 
